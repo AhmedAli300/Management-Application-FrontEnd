@@ -1,0 +1,12 @@
+.max-h-200 {
+  max-height: 220px;
+}
+
+.avatar-sm {
+  width: 30px;
+  height: 30px;
+}
+
+.last-border-0:last-child {
+  border-bottom: none !important;
+}

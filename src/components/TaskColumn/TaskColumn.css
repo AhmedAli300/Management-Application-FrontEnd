@@ -1,0 +1,13 @@
+/* TaskColumn custom CSS */
+.column-card {
+  background-color: #f8f9fa;
+  min-height: 480px;
+}
+
+.column-body {
+  max-height: 70vh;
+}
+
+.empty-state {
+  user-select: none;
+}

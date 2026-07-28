@@ -1,0 +1,35 @@
+.custom-navbar {
+  transition: background-color 0.3s ease;
+}
+
+.navbar{
+  background-color: rgb(0, 30, 46) ;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  font-size: 0.9rem;
+  background-color: rgb(2, 165, 153)
+}
+
+.max-w-150 {
+  max-width: 150px;
+}
+
+.hover-scale {
+  transition: transform 0.2s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.04);
+}
+
+.navbar-brand {
+  transition: transform 0.2s ease;
+}
+
+.navbar-brand:hover {
+  transform: translateY(-1px);
+}
