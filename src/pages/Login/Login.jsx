@@ -53,6 +53,7 @@ const Login = () => {
                     </span>
                     <input
                       type="email"
+                      autoComplete="email"
                       className="form-control bg-light border-start-0"
                       id="loginEmail"
                       placeholder="name@example.com"
@@ -73,6 +74,7 @@ const Login = () => {
                     </span>
                     <input
                       type={showPassword ? 'text' : 'password'}
+                      autoComplete="current-password"
                       className="form-control bg-light border-start-0 border-end-0"
                       id="loginPassword"
                       placeholder="••••••••"

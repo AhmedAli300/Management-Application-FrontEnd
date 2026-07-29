@@ -86,6 +86,7 @@ const Register = () => {
                     </span>
                     <input
                       type="email"
+                      autoComplete="email"
                       className="form-control bg-light border-start-0"
                       id="regEmail"
                       placeholder="user1234@gmail.com"
@@ -106,6 +107,7 @@ const Register = () => {
                     </span>
                     <input
                       type={showPassword ? 'text' : 'password'}
+                      autoComplete="new-password"
                       className="form-control bg-light border-start-0 border-end-0"
                       id="regPassword"
                       placeholder="••••••••"
