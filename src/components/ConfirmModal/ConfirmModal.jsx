@@ -19,9 +19,9 @@ const ConfirmModal = ({
   };
 
   return (
-    <div className="modal-backdrop-custom" onClick={handleBackdropClick}>
-      <div className="modal-dialog-custom modal-dialog-centered modal-sm w-100 px-3">
-        <div className="card shadow-lg border-0 rounded-4 animate-scale-in">
+    <div className="modal-backdrop-custom d-flex align-items-center justify-content-center" onClick={handleBackdropClick}>
+      <div className="modal-dialog-custom modal-dialog-centered modal-sm w-100">
+        <div className="card shadow-lg border-0 rounded-4 animate-scale-in w-100">
           <div className="card-body p-4 text-center">
             <div className={`icon-circle bg-${variant}-subtle text-${variant} rounded-circle d-inline-flex align-items-center justify-content-center mb-3`}>
               <i className="bi bi-exclamation-triangle-fill fs-3"></i>
