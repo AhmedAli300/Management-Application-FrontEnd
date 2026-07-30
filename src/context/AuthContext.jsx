@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState } from 'react';
 import { authService } from '../services/authService';
 
 const AuthContext = createContext(null);
@@ -72,6 +72,32 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  // Perform password update
+  const updatePassword = async (currentPassword, newPassword) => {
+    setLoading(true);
+    setError(null);
+    try {
+      const data = await authService.updatePassword(currentPassword, newPassword);
+      if (data?.token) {
+        setToken(data.token);
+        localStorage.setItem('token', data.token);
+        const decodedUser = parseJwt(data.token);
+        if (decodedUser) {
+          setUser(decodedUser);
+          localStorage.setItem('user', JSON.stringify(decodedUser));
+        }
+      }
+      setLoading(false);
+      return { success: true, message: data?.message || 'Password updated successfully.' };
+    } catch (err) {
+      setLoading(false);
+      const message = err.response?.data?.message || err.response?.data || 'Failed to update password.';
+      const errMsg = typeof message === 'string' ? message : 'Failed to update password.';
+      setError(errMsg);
+      return { success: false, message: errMsg };
+    }
+  };
+
   // Perform logout
   const logout = () => {
     setToken(null);
@@ -90,6 +116,7 @@ export const AuthProvider = ({ children }) => {
         isAuthenticated: !!token,
         login,
         register,
+        updatePassword,
         logout,
         setError
       }}

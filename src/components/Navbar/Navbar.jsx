@@ -34,11 +34,18 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             {isAuthenticated && (
-              <li className="nav-item">
-                <Link className="nav-link active d-flex align-items-center gap-1" to="/dashboard">
-                  <i className="bi bi-grid-fill"></i> Dashboard
-                </Link>
-              </li>
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link d-flex align-items-center gap-1" to="/dashboard">
+                    <i className="bi bi-grid-fill"></i> Dashboard
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link d-flex align-items-center gap-1" to="/update-password">
+                    <i className="bi bi-shield-lock-fill text-info"></i> Update Password
+                  </Link>
+                </li>
+              </>
             )}
           </ul>
 

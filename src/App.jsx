@@ -14,6 +14,7 @@ const Login = lazy(() => import('./pages/Login/Login'));
 const Register = lazy(() => import('./pages/Register/Register'));
 const Dashboard = lazy(() => import('./pages/Dashboard/Dashboard'));
 const ProjectBoard = lazy(() => import('./pages/ProjectBoard/ProjectBoard'));
+const UpdatePassword = lazy(() => import('./pages/UpdatePassword/UpdatePassword'));
 const NotFound = lazy(() => import('./pages/NotFound/NotFound'));
 
 function App() {
@@ -55,6 +56,15 @@ function App() {
                     element={
                       <ProtectedRoute>
                         <ProjectBoard />
+                      </ProtectedRoute>
+                    }
+                  />
+
+                  <Route
+                    path="/update-password"
+                    element={
+                      <ProtectedRoute>
+                        <UpdatePassword />
                       </ProtectedRoute>
                     }
                   />

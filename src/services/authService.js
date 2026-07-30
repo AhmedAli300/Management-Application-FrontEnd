@@ -14,8 +14,8 @@ export const authService = {
   },
 
   // Update password for logged-in user
-  updatePassword: async (currentPassword, password) => {
-    const response = await api.patch('/user/updateMyPassword', { currentPassword, password });
+  updatePassword: async (currentPassword, newPassword) => {
+    const response = await api.patch('/user/updateMyPassword', { currentPassword, newPassword });
     return response.data;
   }
 };
